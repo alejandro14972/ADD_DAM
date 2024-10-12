@@ -15,30 +15,142 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.OutputStream;
+import java.io.RandomAccessFile;
+import java.util.Scanner;
 
-public class Metodos {
-
+public class MetodosV2 {
+	static Scanner sc = new Scanner(System.in);
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		File f = new File("C:\\Users\\aleja\\eclipse-workspace\\ADD_DAM\\ficheros", "fichero804.txt");
-		File f2 = new File("metodos.dat");
-		File f3 = new File("datos.dat");
-		File f4 = new File("datosObject.dat");
+		File d = new File("C:\\Users\\aleja\\eclipse-workspace\\ADD_DAM\\ficheros");
+		File f = new File(d, "metodos.txt");
+		File f2 = new File(d,"metodos.dat");
+		File f3 = new File(d,"datos.dat");
+		File f4 = new File(d,"datosObject.dat");
+		File f5 = new File("ficheroaleat.dat");
 
-		 metodosFile(f);
-		// metodosFileWriter(f);
-		// metodosFileReader(f);
-		 //metodosBufferRead(f);
-		// metodosBufferWritter(f);
-		// metodoFileOutputStream(f2);
-		// metodoFileInputStream(f2);
-		// metodoDataOutputStream(f3);
-		// metodoDataInputStream(f3);
-		// metodoObjectOutputStream(f4);
-		// metodoObjectInputStream(f4);
+		//metodosFile(f);
+		//metodosFileWriter(f);
+		//metodosFileReader(f);
+		//metodosBufferWritter(f);
+		//metodosBufferRead(f);
+		//metodoFileOutputStream(f2);
+		//metodoFileInputStream(f2);
+		//metodoDataOutputStream(f3);
+		//metodoDataInputStream(f3);
+		//metodoObjectOutputStream(f4);
+		//metodoObjectInputStream(f4);
+		//metodoAccesoAleatorioEscribir(f5);
+		//mostrarFichero(f5);
+		//pasarPosicion(f5);
+		//pasarPosicionEscribir(f5);
 	}
 	
+	private static void pasarPosicionEscribir(File f5) {
+		int num = 0;
+		try {
+			RandomAccessFile ra = new RandomAccessFile(f5, "rw");
+			
+			System.out.println("dime posicion");
+			num = sc.nextInt();
+			num = (num -1)*4;
+			ra.seek(num);
+			
+			
+			System.out.println("reescribir dato");
+			int num2 = sc.nextInt();
+			ra.writeInt(num2);
+			
+			
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	private static void pasarPosicion(File f5) {
+		int num = 0;
+		try {
+			RandomAccessFile ra = new RandomAccessFile(f5, "rw");
+
+			do {
+			System.out.println("dime posicion");
+			num = sc.nextInt();
+			
+			if (num==0) {
+				System.out.println("Saliendo...");
+				break;
+			}
+			
+			num = (num -1)*4;
+			ra.seek(num);
+			
+			System.out.println(ra.readInt());
+		
+			
+			}while (true);
+			
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+	}
+
+	private static void mostrarFichero(File f) {
+		
+		int num = 0;
+		try {
+
+			RandomAccessFile ra = new RandomAccessFile(f, "rw");
+
+			System.out.println("cuanto pesa mi fichero: " + ra.length());
+			ra.seek(0);
+			
+			while (ra.getFilePointer()<ra.length()) {
+				num= ra.readInt();
+				System.out.println(num);
+			}
+
+		} 
+		
+		catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
+	//metodos aleatorios
+	private static void metodoAccesoAleatorioEscribir(File f5) {
+		
+		try {
+
+			RandomAccessFile ra = new RandomAccessFile(f5, "rw");
+
+			ra.seek(0);
+			int num=1;
+			while (num!=0) {
+				System.out.println("Dame un numero: 0 terminar");
+				 num = sc.nextInt();
+				 if (num!=0) {
+					 ra.writeInt(num);	
+				}
+				 		
+			}
+			ra.close();
+
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+
 	//métodos de objetos
 	private static void metodoObjectInputStream(File f4) {
 	    // TODO Auto-generated method stub
@@ -202,6 +314,7 @@ public class Metodos {
 		try {
 			FileWriter fo = new FileWriter(f);
 			fo.write("ESCRIBIENDO FILE WRITER()");
+			fo.write("\n");
 			fo.append("Finalizado...");
 			fo.close();
 
