@@ -45,6 +45,9 @@ public class Ejercicio801 {
 		        }
 		    }
 		    
+		    
+		   
+		    
 		  //aqui ya puedo trabajar con los datos en un array:
 		    totalAlumnos(aux);
 		    ordenarEdades(edalm);
