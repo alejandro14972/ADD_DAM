@@ -8,15 +8,15 @@ public class Persona implements Serializable /*guardar en bytes*/ {
 	private int edad;
 	private boolean carnet;
 
-	public String getNombre() {
-		return nombre;
-	}
-
 	public Persona(String nombre, int edad, boolean carnet) {
 		super();
 		this.nombre = nombre;
 		this.edad = edad;
 		this.carnet = carnet;
+	}
+	
+	public String getNombre() {
+		return nombre;
 	}
 
 	public void setNombre(String nombre) {
