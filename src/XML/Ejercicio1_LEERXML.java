@@ -47,8 +47,6 @@ public class Ejercicio1_LEERXML {
 		                System.out.print("DNI: " + elemento.getElementsByTagName("dni").item(0).getTextContent()+ " ");
 		                System.out.print("Teléfono: " + elemento.getElementsByTagName("telefono").item(0).getTextContent()+ " ");
 		                System.out.print("Edad: " + elemento.getElementsByTagName("edad").item(0).getTextContent()+" ");
-		                
-		                
 		            }
 		            System.out.println();
 		        }

@@ -45,7 +45,6 @@ public class Ejercicio1_XML {
 
 			while (true) {
 				try {
-
 					p = (Persona) oi.readObject();
 					datos.add(p); // ALMACENAR DATOS EN EL ARRAYLIST
 					// System.out.println(p.toString());

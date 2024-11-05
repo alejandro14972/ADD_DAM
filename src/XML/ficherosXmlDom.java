@@ -14,7 +14,7 @@ public class ficherosXmlDom {
 	static Scanner sc = new Scanner(System.in);
 
 	public static void main(String[] args) {
-		//crearFichero();
+		crearFichero();
 		cargarFichero();
 	}
 
