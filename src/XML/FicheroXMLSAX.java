@@ -7,6 +7,9 @@ import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 import org.xml.sax.XMLReader;
 
+/*
+ * Utiliza SAX para visualizar el contenido del fichero del apartado b) del ejercicio anterior.
+ */
 public class FicheroXMLSAX {
 
 	public static void main(String[] args) {

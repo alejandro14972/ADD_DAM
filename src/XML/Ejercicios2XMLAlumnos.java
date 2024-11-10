@@ -28,6 +28,12 @@ import org.w3c.dom.NodeList;
 import org.w3c.dom.Text;
 import org.xml.sax.SAXException;
 
+
+/*
+ * Utiliza DOM para leer el archivo y mostrar por consola la lista de alumnos con sus nombres, edades y notas.
+ * Posteriormente crea un nuevo archivo xml como se muestra a continuación y rellénalo con los datos del anterior:
+ */
+
 public class Ejercicios2XMLAlumnos {
 
 	public static void main(String[] args) {
@@ -54,7 +60,7 @@ public class Ejercicios2XMLAlumnos {
 			ArrayList<Estudiantes> sobresalientes = new ArrayList<Estudiantes>();
 			
 			for(Estudiantes estudiante : estudiantes ) {
-
+				
 				if (estudiante.getNota() <5) {
 					suspensos.add(estudiante);
 				}else if(estudiante.getNota() <7) {
@@ -65,7 +71,7 @@ public class Ejercicios2XMLAlumnos {
 					sobresalientes.add(estudiante);
 				}
 			}
-				
+			
 				crearElement(doc, rootElement, "suspensos", suspensos);
 				crearElement(doc, rootElement, "aprobados", aprobados);
 				crearElement(doc, rootElement, "notables", notables);
@@ -76,7 +82,7 @@ public class Ejercicios2XMLAlumnos {
 			try {
 				Transformer transformer = transfac.newTransformer();
 				
-				DOMSource source = new DOMSource();
+				DOMSource source = new DOMSource(doc);
 				StreamResult result = new StreamResult(archivo);
 				
 				try {
@@ -149,6 +155,7 @@ public class Ejercicios2XMLAlumnos {
 	}
 	
 	private static void crearElement(Document doc, Element root, String categoria, ArrayList<Estudiantes> estudiante) {
+		System.out.println(estudiante);
 		Element category = doc.createElement(categoria);
 		root.appendChild(category);
 		Element numero = doc.createElement("numero");

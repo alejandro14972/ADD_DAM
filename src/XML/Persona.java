@@ -2,6 +2,9 @@ package XML;
 
 import java.io.Serializable;
 
+/*
+ * calse asociada a Ejercicio1_DAT.java
+ */
 public class Persona implements Serializable{
 	
 	

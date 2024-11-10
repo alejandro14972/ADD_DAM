@@ -2,6 +2,10 @@ package XML;
 
 import java.io.Serializable;
 
+
+/**
+ * clase asociada a Ejercicios2XMLAlumnos.java
+ */
 public class Estudiantes implements Serializable{
     private String nombre;
     private int edad;

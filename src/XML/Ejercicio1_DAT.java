@@ -10,7 +10,11 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 
-
+/*
+ * 
+ * a) Crea un fichero "FichPersona.dat”, que almacene varios objetos persona.	
+ * 
+ */
 
 public class Ejercicio1_DAT {
 

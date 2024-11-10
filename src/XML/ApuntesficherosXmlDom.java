@@ -10,7 +10,7 @@ import javax.xml.transform.stream.*;
 import java.io.*;
 import java.util.Scanner;
 
-public class ficherosXmlDom {
+public class ApuntesficherosXmlDom {
 	static Scanner sc = new Scanner(System.in);
 
 	public static void main(String[] args) {

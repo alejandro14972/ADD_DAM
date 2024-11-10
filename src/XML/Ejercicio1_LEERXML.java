@@ -13,6 +13,10 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
+
+/*
+ * c) Implementa una clase que permita leer el documento XML del apartado anterior.
+ */
 public class Ejercicio1_LEERXML {
 
 	public static void main(String[] args) {

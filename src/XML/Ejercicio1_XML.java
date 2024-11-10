@@ -25,6 +25,11 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Text;
 
+
+/*
+ * b) Tomando como base el fichero anterior, crea un documento XML usando DOM.
+ */
+
 public class Ejercicio1_XML {
 	static Scanner sc = new Scanner(System.in);
 
