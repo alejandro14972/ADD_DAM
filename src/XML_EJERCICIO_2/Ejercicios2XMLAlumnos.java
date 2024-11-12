@@ -1,4 +1,4 @@
-package XML;
+package XML_EJERCICIO_2;
 
 import java.io.EOFException;
 import java.io.File;

@@ -1,4 +1,4 @@
-package XML;
+package XML_EJERCICIO_1;
 
 import java.io.Serializable;
 

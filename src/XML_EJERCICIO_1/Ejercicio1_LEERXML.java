@@ -1,4 +1,4 @@
-package XML;
+package XML_EJERCICIO_1;
 
 import java.io.File;
 import java.io.IOException;
@@ -45,14 +45,17 @@ public class Ejercicio1_LEERXML {
 		            
 		            if (person.getNodeType() == Node.ELEMENT_NODE) {
 		                Element elemento = (Element) person;
-
-		     
+		                
+		                if (Integer.parseInt(elemento.getElementsByTagName("edad").item(0).getTextContent()) > 20) {  //comporbación y parseo
+		                	
 		                System.out.print("Nombre: " + elemento.getElementsByTagName("nombre").item(0).getTextContent() +" ");
 		                System.out.print("DNI: " + elemento.getElementsByTagName("dni").item(0).getTextContent()+ " ");
 		                System.out.print("Teléfono: " + elemento.getElementsByTagName("telefono").item(0).getTextContent()+ " ");
 		                System.out.print("Edad: " + elemento.getElementsByTagName("edad").item(0).getTextContent()+" ");
+		                
 		            }
 		            System.out.println();
+		        }
 		        }
 
 		    } catch (SAXException e) {

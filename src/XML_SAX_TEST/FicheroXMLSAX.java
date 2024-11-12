@@ -1,4 +1,4 @@
-package XML;
+package XML_SAX_TEST;
 import java.io.IOException;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;

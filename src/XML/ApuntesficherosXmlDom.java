@@ -48,7 +48,7 @@ public class ApuntesficherosXmlDom {
 			Source source = new DOMSource(document);
 
 			try {
-				Result res = new StreamResult(new File("empleados.xml"));
+				Result res = new StreamResult(new File("./ficheros/empleados.xml"));
 				Result res2 = new StreamResult(System.out);
 
 				Transformer transformer = TransformerFactory.newInstance().newTransformer();
