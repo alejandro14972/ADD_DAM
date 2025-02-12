@@ -34,23 +34,23 @@ public class EjerciciosXML_SAX2_2 {
 
 			InputSource fileXML = new InputSource("./ficherosEjerciciosxml/empleados.xml");
 			
-			ArrayList<Integer> edades = gestor.getEdadesventas();
-			System.out.println(edades);
-			
-			double sumEdades = 0;
-			
-			for (int i = 0; i < edades.size(); i++) {
-				sumEdades+= edades.get(i);
-			}
-			
-			System.out.println(sumEdades);
-			
 			try {
 				procesadorXML.parse(fileXML);
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+			
+			ArrayList<Integer> edades = gestor.getEdadesventas();
+			System.out.println(edades);
+			
+			double sumEdades = 0.0;
+			
+			for (int i = 0; i < edades.size(); i++) {
+				sumEdades+= edades.get(i);
+			}
+			
+			System.out.println(sumEdades/edades.size());
 
 		} catch (ParserConfigurationException e) {
 			// TODO Auto-generated catch block

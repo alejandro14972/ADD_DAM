@@ -24,6 +24,7 @@ public class MetodosV2 {
 		// TODO Auto-generated method stub
 
 		File d = new File("C:\\Users\\aleja\\eclipse-workspace\\ADD_DAM\\ficheros");
+		
 		File f = new File(d, "metodos.txt");
 		File f2 = new File(d,"metodos.dat");
 		File f3 = new File(d,"datos.dat");
@@ -47,6 +48,7 @@ public class MetodosV2 {
 		//pasarPosicionEscribir(f5);
 	}
 	
+	//metodos aleatorios
 	private static void pasarPosicionEscribir(File f5) {
 		int num = 0;
 		try {
@@ -125,7 +127,7 @@ public class MetodosV2 {
 
 	}
 
-	//metodos aleatorios
+	
 	private static void metodoAccesoAleatorioEscribir(File f5) {
 		
 		try {
@@ -140,7 +142,6 @@ public class MetodosV2 {
 				 if (num!=0) {
 					 ra.writeInt(num);	
 				}
-				 		
 			}
 			ra.close();
 
@@ -279,7 +280,7 @@ public class MetodosV2 {
 
 	}
 
-	/// Flujos de 16bits
+	// Flujos de 16bits
 	private static void metodosBufferWritter(File f) {
 
 		try {
